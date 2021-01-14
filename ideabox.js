@@ -19,8 +19,8 @@ var openNavigate = function (){
 var createMobileMenu = function (){
 	var newMenu = '<ul class="sidebar-menu">';
 	var menuContent = $('[data-show-menu-on-mobile]').html();
-	menuContent = menuContent.html().replace(/<div class="header-submenu">/g , "");
-	menuContent = menuContent.html().replace(/<\/div>/g , "");
+	menuContent = menuContent.replace(/<div class="header-submenu">/g , "");
+	menuContent = menuContent.replace(/<\/div>/g , "");
 	newMenu = newMenu + menuContent + '</ul>';
 	$('#mobileMenu').prepend(newMenu);
 
